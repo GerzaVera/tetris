@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  background: #aa2da6;
+}
+
+.contenedor {
+  margin: 0 auto;
+  width: 30%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.contenedor h1 {
+  font-family: "Alfa Slab One", cursive;
+  text-align: center;
+  color: #f6ff00;
+  letter-spacing: 3px;
+  font-size: 40px;
+  padding-bottom: 3px;
+  text-shadow: 3px 5px 3px rgba(31, 31, 31, 0);
+}
+.contenedor h1:hover {
+  color: #aeff00;
+}/*# sourceMappingURL=style.css.map */
