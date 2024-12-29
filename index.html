@@ -1,22 +1,46 @@
-</html>
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
-  <title> Tetris</title>
-  <script src='js/juego.js'></script>
-  <link rel="stylesheet" href="sass/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Mejorado</title>
+    <script src='js/juego.js'></script>
+    <link rel="stylesheet" href="sass/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="sass/style.css">
+       
 </head>
 
-
 <body onload='inicializa();'>
-  <div class="contenedor">
-    <h1>JUEGO TETRIS</h1>
-  <canvas id='canvas' style='background-color:#ffff; border:2px solid #000000;'></canvas>
-</div>
-</body>
+    <div class="contenedor">
+        <div>
+            <h1>Juego Tetris</h1>
+            <canvas id='canvas' width="300" height="600"></canvas>
+        </div>
+        <div>
+            <button class="boton" onclick="toggleInstrucciones()">Mostrar/Ocultar Instrucciones</button>
+            <div id="instrucciones" class="instrucciones">
+                <h2>Instrucciones</h2>
+                <p>Bienvenido al clásico Tetris. El objetivo es alinear bloques para completar líneas horizontales y evitar que las piezas lleguen a la parte superior de la pantalla.</p>
+                <ul>
+                    <li><b>Flecha izquierda:</b> Mover bloque a la izquierda.</li>
+                    <li><b>Flecha derecha:</b> Mover bloque a la derecha.</li>
+                    <li><b>Flecha abajo:</b> Acelerar la caída del bloque.</li>
+                    <li><b>Barra espaciadora:</b> Girar el bloque.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
+    <script>
+        function toggleInstrucciones() {
+            const instrucciones = document.getElementById('instrucciones');
+            instrucciones.classList.toggle('hidden');
+        }
+    </script>
+</body>
 
 </html>

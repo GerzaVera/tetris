@@ -1,27 +1,54 @@
-*
-    margin: 0
-    padding: 0
-    background: #aa2da6
-    
-    
+// Variables
+$primary-color: #ffcc00
+$secondary-color: #333
+$gradient-start: #1e3c72
+$gradient-end: #2a5298
+
+// Mixins
+=box-shadow($color, $x, $y, $blur)
+  -webkit-box-shadow: $x $y $blur $color
+  -moz-box-shadow: $x $y $blur $color
+  box-shadow: $x $y $blur $color
+
+// Estilos generales
+body
+  font-family: 'Alfa Slab One', cursive
+  margin: 0
+  padding: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  min-height: 100vh
+  background: linear-gradient(135deg, $gradient-start, $gradient-end)
+  color: white
+
 .contenedor
-    margin: 0 auto
-    width: 30%
-    margin-top: 1rem
-    margin-bottom: 1rem
-    
-    h1
-        font-family: 'Alfa Slab One', cursive
-        text-align: center
-        color: #f6ff00
-        letter-spacing: 3px
-        font-size: 40px
-        padding-bottom: 3px
-        text-shadow: 3px 5px 3px #1f1f1f00
-    
-    h1:hover
-        color: #aeff00
+  text-align: center
+  background: rgba(0, 0, 0, 0.8)
+  padding: 20px
+  border-radius: 15px
+  +box-shadow(rgba(0, 0, 0, 0.5), 0, 8px, 15px)
+  max-width: 400px
+  width: 90%
 
+h1
+  margin: 0 0 20px
+  font-size: 2rem
+  color: $primary-color
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7)
 
+canvas
+  display: block
+  margin: 0 auto
+  background-color: $secondary-color
+  border: 3px solid $primary-color
+  +box-shadow(rgba(255, 255, 255, 0.3), 0, 4px, 10px)
+  border-radius: 5px
 
-   
+// Media query para móviles
+@media (max-width: 600px)
+  h1
+    font-size: 1.5rem
+  canvas
+    width: 90%
+    height: auto
